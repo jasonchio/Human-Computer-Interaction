@@ -1,0 +1,24 @@
+<THEME>
+ <VIEW scriptFile="jason.js" titleBar="false" backgroundColor="none" transparencycolor="#FF00FF" clippingColor="#FF00FF" backgroundImage="BasePlay.png">
+	<BUTTONGROUP downImage="PressPlay.png" hoverImage="HoverPlay.png" mappingImage="Mask.png" >
+		<PLAYELEMENT mappingColor="#00FF00" />
+		<PREVELEMENT mappingColor="#0000FF" />
+		<NEXTELEMENT mappingColor="#FF00B0" />
+		<BUTTONELEMENT mappingColor="#FFFF00" onClick="player.settings.setmode('shuffle',down);" sticky="true" downToolTip="Shuffle Off" upToolTip="Shuffle On"/>
+		<BUTTONELEMENT mappingColor="#00FFFF" onClick="player.settings.setmode('loop',down);" sticky="true" downToolTip="Repeat Off" upToolTip="Repeat On"/>
+		<BUTTONELEMENT mappingColor="#FF0000" onClick="player.settings.volume = player.settings.volume - 5;" toolTip="Decrease"/>
+		<BUTTONELEMENT mappingColor="#FF963E" onClick="player.settings.volume = player.settings.volume + 5;" toolTip="Increase"/>
+		<BUTTONELEMENT mappingColor="#B98100" onClick="view.close();" upToolTip="Turn off"/>
+		<BUTTONELEMENT mappingColor="#C1ECFF" onClick="view.returnToMediaCenter();" upToolTip="Main View Library"/>
+		<BUTTONELEMENT mappingColor="#5DFF35" onClick="JScript:openFile();" upToolTip="Open a Song"/>
+	</BUTTONGROUP>
+	<BUTTONGROUP downImage="PressPause.png" hoverImage="HoverPause.png" mappingImage="Mask.png" visible="wmpenabled:player.controls.pause" image="BasePause.png">
+		<PAUSEELEMENT mappingColor="#00FF00" />
+	</BUTTONGROUP>
+	<TEXT width="50" value="wmpprop:player.controls.currentPositionString" top="35" left="100" justification="right" fontface="Lucida Console"> </TEXT>
+	<TEXT width="100" value="wmpprop:player.currentMedia.DurationString" top="35" left="120" justification="right" fontface="Lucida Console"> </TEXT>
+	<TEXT width="3100" id="name" value="wmpprop:player.currentMedia.name" top="5" left="10" justification="center" foregroundColor="#00C1FF" fontSize="15" fontface="Lucida Console"> </TEXT>
+	<TEXT width="100" value="Time" top="35" left="10" justification="left" fontface="Lucida Console"> </TEXT>
+	<TEXT width="100" id="name" value="Song" top="5" left="10" justification="left" foregroundColor="#00C1FF" fontSize="15" fontface="Lucida Console"> </TEXT>
+ </VIEW>
+</THEME>
